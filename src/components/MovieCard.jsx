@@ -1,8 +1,14 @@
-export default function MovieCard() {
+export default function MovieCard(dados) {
     return(
         <>
-        <h1>Movie Card</h1>
-        {/* Modelo de card que será utilizado para os filmes */}
+            {
+                dados.map(pegaDados => (
+                    <div className="MovieCard">
+                        <h3>{pegaDados.titulo}</h3>
+                        <img src={pegaDados.imagem_destaque} alt=""/>
+                    </div>
+                ))
+            }
         </>
     )
 
